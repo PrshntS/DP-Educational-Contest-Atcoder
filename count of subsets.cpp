@@ -15,7 +15,7 @@ int main() {
 	}
 	// cout<<sum;
 	cin>>sum;
-	bool dp[n + 1][sum + 1];
+	ll dp[n + 1][sum + 1];
 	for(ll i=0;i<sum+1;i++)
 	{
 		dp[0][i]=0;
@@ -32,7 +32,7 @@ int main() {
 			
 			if (a[i - 1] <= j)
 			{
-				dp[i][j] = dp[i - 1][j - a[i - 1]] || dp[i - 1][j];
+				dp[i][j] = dp[i - 1][j - a[i - 1]] + dp[i - 1][j];
 			}
 			else
 			{
