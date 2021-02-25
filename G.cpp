@@ -7,8 +7,8 @@ using namespace std;
 #define mod 1e9+7
 ll size=1e5+5;
 vector<ll> a[100005];
-vector<bool> visited(size,false);
-vector<ll> dp(size,0);
+vector<bool> visited(100005,false);
+vector<ll> dp(100005,0);
 void dfs(ll b)
 {
 	visited[b]=true;
